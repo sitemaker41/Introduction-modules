@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>humblytkinter</title>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(90deg, #ffd439cc 0%, #00acc1cc 50%, #2e51ffcc 100%);
+      font-family: Vazir, Tahoma, sans-serif;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      background-attachment: fixed;
+    }
+
+    h1 {
+      font-size: 38px;
+      max-width: 900px;
+      margin-bottom: 25px;
+      padding: 15px 25px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(12px);
+      color: #0a0a0a;
+      user-select: none;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 26px;
+      max-width: 900px;
+      margin-bottom: 10px;
+      color: #fff;
+      text-shadow: 1px 1px 4px #0009;
+      align-self: flex-start;
+    }
+
+    p {
+      font-size: 20px;
+      color: #fff;
+      text-shadow: 1px 1px 3px #0009;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+
+    .code {
+      background: #000;
+      color: #0f0;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-family: monospace;
+      font-size: 18px;
+      overflow-x: auto;
+      white-space: pre;
+      box-shadow: 0 0 12px #00acc1aa inset;
+      direction: ltr;
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .box {
+      max-width: 900px;
+      width: 90%;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      border: 2px solid #00acc1;
+      padding: 20px 25px;
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 500;
+      line-height: 1.9;
+      backdrop-filter: blur(25px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      user-select: text;
+      white-space: pre-wrap;
+    }
+
+    #copybtn {
+      margin-bottom: 30px;
+      font-size: 17px;
+      background: linear-gradient(45deg, #2e51ff, #00acc1);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      box-shadow:
+        0 4px 8px rgba(46, 81, 255, 0.5),
+        0 0 12px rgba(46, 81, 255, 0.8);
+      transition: all 0.3s ease;
+      font-family: Vazir, Tahoma, sans-serif;
+    }
+
+    #copybtn:hover {
+      background: linear-gradient(45deg, #00acc1, #2e51ff);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 700px) {
+      h1 { font-size: 28px; padding: 10px 18px; }
+      h3 { font-size: 20px; }
+      p { font-size: 16px; }
+      .code { font-size: 14px; padding: 8px 10px; }
+      .box { font-size: 16px; padding: 15px 18px; }
+      #copybtn { font-size: 15px; padding: 8px 18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>کتابخانهٔ humblytkinter</h1>
+
+  <h3>روش نصب:</h3>
+  <p>در ترمینال بنویسید:</p>
+  <div class="code" dir="ltr">pip install humblytkinter</div>
+  <button id="copybtn" onclick="copy()">کپی</button>
+
+  <h3>تابع‌ها:</h3>
+  <div class="box">
+    <div dir="ltr">make_window(window_name)</div>
+    ساخت صفحهٔ اصلی (همیشه باید ابتدای برنامه باشد)
+
+    <div dir="ltr">make_label(label_text, label_number)</div>
+    ساخت لیبل با متن دلخواه و شماره یکتا
+
+    <div dir="ltr">make_button(button_text, button_number, button_command)</div>
+    ساخت دکمه با متن، شماره یکتا و تابع هنگام کلیک
+
+    <div dir="ltr">make_entery(entery_number)</div>
+    ساخت فیلد ورودی (entry) با شماره یکتا
+
+    <div dir="ltr">get_output(entery_number)</div>
+    دریافت مقدار تایپ‌شده در entry مشخص
+
+    <div dir="ltr">last_code()</div>
+    پایان برنامه. کد باید بین make_window و این تابع باشد
+
+    <div dir="ltr">help()</div>
+    نمایش ماژول گرافیکی راهنمای کتابخانه
+  </div>
+
+  <script>
+    function copy() {
+      const btn = document.getElementById("copybtn");
+      navigator.clipboard
+        .writeText("pip install humblytkinter")
+        .then(() => {
+          btn.innerText = "کپی شد";
+          setTimeout(() => (btn.innerText = "کپی"), 2000);
+        })
+        .catch((err) => alert("خطا در کپی: " + err));
+    }
+  </script>
+</body>
+</html>

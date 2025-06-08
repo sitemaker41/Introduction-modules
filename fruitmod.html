@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>fruitmod</title>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(90deg, #ffd439cc 0%, #00acc1cc 50%, #2e51ffcc 100%);
+      font-family: Vazir, Tahoma, sans-serif;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      background-attachment: fixed;
+    }
+
+    h1 {
+      font-size: 38px;
+      max-width: 900px;
+      margin-bottom: 25px;
+      padding: 15px 25px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(12px);
+      color: #0a0a0a;
+      user-select: none;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 26px;
+      max-width: 900px;
+      margin-bottom: 10px;
+      color: #fff;
+      text-shadow: 1px 1px 4px #0009;
+      align-self: flex-start;
+    }
+
+    p {
+      font-size: 20px;
+      color: #fff;
+      text-shadow: 1px 1px 3px #0009;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+
+    .code {
+      background: #000;
+      color: #0f0;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-family: monospace;
+      font-size: 18px;
+      overflow-x: auto;
+      white-space: pre;
+      box-shadow: 0 0 12px #00acc1aa inset;
+      direction: ltr;
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .box {
+      max-width: 900px;
+      width: 90%;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      border: 2px solid #00acc1;
+      padding: 20px 25px;
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.8);
+      font-weight: 500;
+      line-height: 1.8;
+      backdrop-filter: blur(25px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      user-select: text;
+      white-space: pre-wrap;
+    }
+
+    #copybtn {
+      margin-bottom: 30px;
+      font-size: 17px;
+      background: linear-gradient(45deg, #2e51ff, #00acc1);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      box-shadow:
+        0 4px 8px rgba(46, 81, 255, 0.5),
+        0 0 12px rgba(46, 81, 255, 0.8);
+      transition: all 0.3s ease;
+      font-family: Vazir, Tahoma, sans-serif;
+    }
+
+    #copybtn:hover {
+      background: linear-gradient(45deg, #00acc1, #2e51ff);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 700px) {
+      h1 { font-size: 28px; padding: 10px 18px; }
+      h3 { font-size: 20px; }
+      p { font-size: 16px; }
+      .code { font-size: 14px; padding: 8px 10px; }
+      .box { font-size: 16px; padding: 15px 18px; }
+      #copybtn { font-size: 15px; padding: 8px 18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>کتابخانهٔ fruitmod</h1>
+
+  <h3>روش نصب:</h3>
+  <p>در ترمینال بنویسید:</p>
+
+  <div class="code" dir="ltr">pip install fruitmod</div>
+
+  <button id="copybtn" onclick="copy()">کپی</button>
+
+  <h3>تابع‌ها:</h3>
+  <div class="box">
+    <div dir="ltr">sib(n) / factorial(n)</div>
+    فاکتوریل عدد
+
+    <div dir="ltr">golabi(a,b) / sum(a,b)</div>
+    محاسبه جمع a تا b
+
+    <div dir="ltr">tameshk(a,b) / compare(a,b)</div>
+    محاسبه عدد بزرگ‌تر بین دو عدد
+
+    <div dir="ltr">porteghal(n) / perfect_square(n)</div>
+    نزدیک‌ترین عدد مربعی کوچکتر از عدد
+
+    <div dir="ltr">talebi(n) / sum_digits(n)</div>
+    جمع ارقام عدد
+
+    <div dir="ltr">havij(n) / reverse(n)</div>
+    برعکس‌کردن رقم‌های عدد
+
+    <div dir="ltr">kivi(n) / perfect(n)</div>
+    بررسی عدد کامل بودن
+
+    <div dir="ltr">kiar(n) / check_prime(n)</div>
+    بررسی عدد اول بودن
+
+    <div dir="ltr">holoo(n) / gcd(n)</div>
+    بزرگ‌ترین مقسوم‌علیه مشترک
+
+    <div dir="ltr">ananas(n) / fibonacci(n)</div>
+    عدد فیبوناچی nام
+
+    <div dir="ltr">aloo(n) / count_digits(n)</div>
+    تعداد رقم‌های عدد
+
+    <div dir="ltr">moz(n) / count_divisor(n)</div>
+    تعداد مقسوم‌علیه‌های عدد
+
+    <div dir="ltr">anar(n) / absolute(n)</div>
+    قدر مطلق عدد
+
+    <div dir="ltr">angoor(n) / print_revers(n)</div>
+    چاپ ارقام از راست به چپ
+
+    <div dir="ltr">albaloo(a,b) / print_atob(a,b)</div>
+    چاپ اعداد از a تا b
+  </div>
+
+  <script>
+    function copy() {
+      const btn = document.getElementById("copybtn");
+      navigator.clipboard.writeText("pip install fruitmod").then(() => {
+        btn.innerText = "کپی شد";
+        setTimeout(() => (btn.innerText = "کپی"), 2000);
+      }).catch(err => alert("خطا در کپی: " + err));
+    }
+  </script>
+</body>
+</html>
